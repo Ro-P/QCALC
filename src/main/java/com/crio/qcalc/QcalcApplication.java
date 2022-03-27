@@ -9,9 +9,12 @@ public class QcalcApplication {
 		//SpringApplication.run(QcalcApplication.class, args);
 		//System.out.println("Hello world");
         System.out.println("Starting Qcalc...");
+
 		StandardCalculator calc = new StandardCalculator();
-		calc.add(1, 1);
-		System.out.println(calc.getResult());
+
+        calc.add(Double.MAX_VALUE, Double.MAX_VALUE);
+
+        calc.printResult();
 	}
 
 }

@@ -8,13 +8,20 @@ public class QcalcApplication {
 	public static void main(String[] args) {
 		//SpringApplication.run(QcalcApplication.class, args);
 		//System.out.println("Hello world");
+       
+		LogicCalculator calc = new LogicCalculator();
+
+		calc.NOT(6);
+		
+		calc.printResult();
+
         System.out.println("Starting Qcalc...");
 
-		StandardCalculator calc = new StandardCalculator();
+		// StandardCalculator calc = new StandardCalculator();
 
-        calc.add(Double.MAX_VALUE, Double.MAX_VALUE);
+        // calc.add(Double.MAX_VALUE, Double.MAX_VALUE);
 
-        calc.printResult();
+        // calc.printResult();
 	}
 
 }

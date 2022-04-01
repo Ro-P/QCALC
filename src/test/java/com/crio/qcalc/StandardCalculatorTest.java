@@ -15,6 +15,18 @@ public class StandardCalculatorTest {
     }
 
     @Test
+    @DisplayName("Test Division divide by zero")
+    void testDivisionDividebyZero(){
+        //Assert
+        Assertions.assertThrows(ArithmeticException.class,new Executable(){
+            @Override
+            public void execute() throws Throwable{
+                standardCalculator.divide(Double.MAX_VALUE,0.0);
+            }
+        });
+    }
+
+    @Test
     @DisplayName("Test Multiplication Overflow of Two Doubles")
     void testMultiplicationOverflowForDoubles(){
         //Assert
@@ -36,6 +48,7 @@ public class StandardCalculatorTest {
             }
         });
     }
+
 
     @Test
     @DisplayName("Test Addition Overflow of Two Doubles")
